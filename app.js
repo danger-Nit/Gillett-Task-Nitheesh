@@ -39,6 +39,11 @@ function closeModal(){
   setTimeout(() => {
 		modalCont.style.display = "none";
 	}, 500);
+  
+  // Clear the form
+  document.getElementById("nname").value = ""; 
+  document.getElementById("half-life").value = ""; 
+  document.getElementById("activity").value = ""; 
 }
 
 /* 
@@ -88,10 +93,7 @@ function updateNuclideInfo() {
   // Update the text to dispaly the total time taken
   document.getElementById("tot-days").innerHTML = "Time for total activity to decay: " + totalDecayTime.toString();
   
-  // Clear the form
-  document.getElementById("nname").value = ""; 
-  document.getElementById("half-life").value = ""; 
-  document.getElementById("activity").value = ""; 
+  
 
   // Close the form 
   closeModal();
